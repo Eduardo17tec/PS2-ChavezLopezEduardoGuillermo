@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace PS2_ChavezLopezEduardoGuillermo.Controllers
 {
+    [Authorize]
     public class PrincipalController : Controller
     {
         // GET: Principal

@@ -14,6 +14,8 @@ namespace PS2_ChavezLopezEduardoGuillermo.Models
         public string Clave { get; set; }
         [Display(Name = "Nombre del Cliente")]
         public string Cliente { get; set; }
+        [Display(Name = "Estatus")]
+        public string Status { get; set; }
         public int MenuId { get; set; }
         [ForeignKey("MenuId")]
         public Menu Menu { get; set; }
