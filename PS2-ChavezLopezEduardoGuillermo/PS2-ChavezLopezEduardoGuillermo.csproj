@@ -1784,7 +1784,8 @@
     <Content Include="Content\fontawesome-free\webfonts\fa-regular-400.svg" />
     <Content Include="Content\fontawesome-free\webfonts\fa-solid-900.svg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\img\banner-bg.jpg" />
+    <Content Include="Content\img\B.jpg" />
+    <Content Include="Content\img\Crepas.jpg" />
     <Content Include="Content\img\res01.jpg" />
     <Content Include="Content\img\res02.jpg" />
     <Content Include="Content\sb-admin-2.min.css" />

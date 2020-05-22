@@ -39,7 +39,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
         // GET: Orders/Create
         public ActionResult Create()
         {
-            ViewBag.MenuId = new SelectList(db.Menus, "Id", "Descripcion");
+            ViewBag.MenuId = new SelectList(db.Menus, "Id", "Alimento");
             return View();
         }
 
