@@ -13,7 +13,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
     public class OrdersController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        [Authorize]
         // GET: Orders
         public ActionResult Index()
         {
@@ -28,7 +28,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Order order = db.Orders.Find(id);
+            Order order = db.Orders.Include(o => o.Menu).Where (m => m.Id == id).FirstOrDefault();
             if (order == null)
             {
                 return HttpNotFound();
@@ -60,7 +60,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
             ViewBag.MenuId = new SelectList(db.Menus, "Id", "Descripcion", order.MenuId);
             return View(order);
         }
-
+        [Authorize]
         // GET: Orders/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -93,7 +93,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
             ViewBag.MenuId = new SelectList(db.Menus, "Id", "Descripcion", order.MenuId);
             return View(order);
         }
-
+        [Authorize]
         // GET: Orders/Delete/5
         public ActionResult Delete(int? id)
         {

@@ -4,11 +4,12 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Ordenes</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<a href="@Url.Action("Create","Orders")" class="btn btn-dark btn-sm btn-icon-split">
+    <span class="icon text-white-50"><i class="fas fa-plus-circle"></i></span>
+    <span class="text">Nuevo Proveedor</span>
+</a>
 <table class="table">
     <tr>
         <th>
@@ -35,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.Cliente)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

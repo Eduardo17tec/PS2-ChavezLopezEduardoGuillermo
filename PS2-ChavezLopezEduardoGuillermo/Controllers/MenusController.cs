@@ -13,7 +13,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
     public class MenusController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        [Authorize]
         // GET: Menus
         public ActionResult Index()
         {
@@ -34,7 +34,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
             }
             return View(menu);
         }
-
+        [Authorize]
         // GET: Menus/Create
         public ActionResult Create()
         {
@@ -57,7 +57,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
 
             return View(menu);
         }
-
+        [Authorize]
         // GET: Menus/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -88,7 +88,7 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
             }
             return View(menu);
         }
-
+        [Authorize]
         // GET: Menus/Delete/5
         public ActionResult Delete(int? id)
         {

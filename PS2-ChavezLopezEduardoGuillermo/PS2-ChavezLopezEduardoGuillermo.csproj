@@ -1786,6 +1786,7 @@
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\img\B.jpg" />
     <Content Include="Content\img\Crepas.jpg" />
+    <Content Include="Content\img\CrepasC.jpg" />
     <Content Include="Content\img\res01.jpg" />
     <Content Include="Content\img\res02.jpg" />
     <Content Include="Content\sb-admin-2.min.css" />

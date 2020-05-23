@@ -271,8 +271,8 @@ table {
     border: 5px solid rgb(255, 176, 59);
     border-radius: 2px;
 }
-#event{
-    background: url('../img/res02.jpg') no-repeat;
+#Especialidad{
+    background: url(/Content/img/CrepasC.jpg) no-repeat;
     background-size: cover;
 }
 .left-images img {

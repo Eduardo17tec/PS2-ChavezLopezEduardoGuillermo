@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PS2_ChavezLopezEduardoGuillermo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,13 +9,14 @@ namespace PS2_ChavezLopezEduardoGuillermo.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Index()
         {
             if (User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Principal");
             }
-            return View();
+            return View(db.Orders.ToList());
         }
 
         public ActionResult About()
